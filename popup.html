@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .logo {
+      width: 24px;
+      height: 24px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .switch-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 26px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .3s;
+      border-radius: 34px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 20px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .3s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #4CAF50;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(24px);
+    }
+
+    .status {
+      font-size: 14px;
+      color: #666;
+      margin-top: 15px;
+      text-align: center;
+      padding: 10px;
+      border-radius: 6px;
+      background-color: #f0f0f0;
+    }
+
+    .feature-list {
+      margin-top: 15px;
+      font-size: 13px;
+      color: #666;
+      padding-left: 20px;
+    }
+
+    .feature-list li {
+      margin-bottom: 8px;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+      margin-top: 10px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    .social-links a {
+      color: #666;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .social-links a:hover {
+      color: #1a73e8;
+    }
+    
+    .social-links i {
+      font-size: 15px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="icons/icon48.png" alt="Logo" class="logo">
+      <h1>YouTab Control</h1>
+    </div>
+
+    <div class="switch-container">
+      <span>Auto Pause/Resume</span>
+      <label class="switch">
+        <input type="checkbox" id="toggleSwitch">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="status" id="status">Extension is disabled</div>
+
+    <ul class="feature-list">
+      <li>Automatically pauses videos when switching tabs</li>
+      <li>Resumes playback when returning to YouTube</li>
+      <li>Works with multiple YouTube tabs</li>
+    </ul>
+    
+    <div class="footer">
+      Made with <i class="fa-solid fa-heart"></i> by Samrat
+    </div>
+    
+    <div class="social-links">
+      <a href="https://github.com/blackholeofuniverse/youtab-control-by-samrat" target="_blank">
+        <i class="fab fa-github-square"></i>
+      </a>
+      <a href="https://x.com/Samrat1428" target="_blank">
+        <i class="fab fa-twitter-square"></i>
+      </a>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
