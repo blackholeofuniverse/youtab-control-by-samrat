@@ -1,6 +1,15 @@
+<div style="text-align: center;">
+<a href="https://www.youtube.com/watch?v=9LevuOH5OQ8" target="_blank">
+  <img src="https://cdn.jsdelivr.net/gh/blackholeofuniverse/cdn/thumbnail.jpg" alt="YouTube Video Thumbnail" style="width: 100%; max-width: 600px;"/>
+</a>
+</div>
+
 # YouTab Control
 
 A browser extension that automatically manages YouTube video playback based on tab focus. When you switch away from a YouTube tab, the video automatically pauses. When you switch back, it automatically resumes playback.
+
+## Watch this Youtube Video to know more
+- [Click here to watch](https://www.youtube.com/watch?v=9LevuOH5OQ8)
 
 ## Features
 
